@@ -1,0 +1,34 @@
+		 BIRTHDAY PARADOX VALIDATOR 
+		-----------------------------
+
+What is it ?
+------------
+
+This is a code to prove that the Birthday Paradox is valid.
+
+Usage -
+-------
+
+Input to the program is the number of people in the group for which the paradox has to be proved. 
+			
+
+Implementation -
+----------------
+
+Language Used - C
+
+The code is divided into 3 modules:
+
+1) Calculating the mathematical probability for the number of people
+   -----Explaination is at line no. 205 in the code
+		
+2) Running trials, calculating individual probabilities and comparing them with the mathematical probability
+   -----Random birthdays are assigned to the people and the total repetitions are checked
+
+3) Print result when calculated probability equals mathematical probability
+	
+
+Author -
+--------
+Group Name : Follow The Code
+Email Id   : wefollowthecode@gmail.com

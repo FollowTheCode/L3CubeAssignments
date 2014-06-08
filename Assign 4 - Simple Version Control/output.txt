@@ -1,0 +1,71 @@
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ gcc svc.c -o svc
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc help
+
+ADD NEW VERSION       : ADDS THE CURRENT VERSION TO THE VERSION FILE
+USAGE                 : ./svc commit <filename>
+
+VIEW PREVIOUS VERSION : FETCHES Nth VERSION. OPTION TO LOAD AN EXISTING VERSION PROVIDED
+USAGE                 : ./svc version <filename> <version-no>
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+New Version Added (0)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+This Version Already Exists (0)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+New Version Added (1)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+New Version Added (2)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+New Version Added (3)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+New Version Added (4)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+New Version Added (5)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+New Version Added (6)
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc commit One.txt
+
+YOU CAN ONLY APPEND ONE LINE OR DELETE ANY ONE LINE AT GIVEN TIME.
+PLEASE UNDO THE CHANGES AND COMMIT.
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ cat One.txt
+TCP
+UDP
+ICMP
+ARP
+ONE
+TWO
+THREE
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ ./svc version One.txt 5
+
+TCP
+UDP
+ICMP
+ARP
+
+Do you want load this version [y/n] : y
+
+FILE LOADED.
+
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ cat One.txt
+TCP
+UDP
+ICMP
+ARP
+hrishi@hrishi-Lenovo-Z580:~/l3cube/svc$ 
+

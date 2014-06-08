@@ -1,0 +1,27 @@
+		Duplicate File Finder
+		---------------------
+
+What is it ?
+------------
+
+It is a program which displays all the duplicate files (files with same name, different sizes, different paths) in a given hard drive and allows the user to delete or ignore them. The user needs to only enter the drive to be scanned.
+
+Usage -
+-------
+
+The input to the program is the name of the drive. On executing, all the duplicate files (with their paths and sizes) are listed. An option to ignore or delete is provided to the user. If user chooses to delete, he/she will have to enter the index of the file (as displayed on the screen).
+
+
+Implementation -
+----------------
+
+Language Used - Java
+
+The file data structure is used to represent the drive entered by the user. Next step is to fetch all the contents of the drive. Recursion is used to fetch the contents of the directories and sub-directories in thegiven drive. SET data structure is used to store unique file names (Without the path). The path to these file names are stored in an array. When the program tries to enter a file in the SET, duplicate files are detected and a list of such such files is maintained. The list is displayed. To delete a file, the user will have to enter the index. The file at this index is then deleted using 'delete()' function.
+
+
+Author -
+--------
+Group Name : Follow The Code
+Email Id   : wefollowthecode@gmail.com
+

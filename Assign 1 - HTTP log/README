@@ -1,0 +1,39 @@
+		Making sense out of HTTP log file 
+		---------------------------------
+
+What is an http log file ?
+--------------------------
+
+An http log file is created and maintained by a server. It maintains a history of page requests. The details may include client IP address, request date/time, request method, page requested, protocol, result code, bytes served, referring url and user agent.
+
+
+Usage -
+-------
+
+The input to the program is the log file. On executing, two files are created.
+1) Summary File -
+
+a) URL STATISTICS     - A list of URLs along with their visited count in descending order.
+b) RESULT STATISTICS  - Success(2XX), Redirection(3XX), Error Client(4XX), Error Server(5XX).
+c) BROWSER STATISTICS - List of all browsers with their count in descending order.
+d) OS STATISTICS      - List of all operating systems with their count in descending order.
+e) BOT STATISTICS     - List of all bots, called spiders with their count in descending order.
+			(Eg - Yahoo ! Slurp, googlebot, exabot, etc.)
+
+2) Log file - Contains all the records in a readable format.
+
+ALSO, A MENU IS PROVIDED TO DISPLAY SPECIFIC STATS.
+
+Implementation -
+----------------
+
+Language Used - C
+
+The log file is scanned, and every record is parsed. All the fields are stored in a temporary structure. URL, BROWSER, OS, RESULT and BOT stats are updated by studying these fields. The fields of this temporarystructure are written to the log file. This temporary structure is overwritten in the next iterations andthe process is continued till EOF is reached. The statistics are written to the summary file in descending order of count. A menu is displayed, which enables the user to view particular statistics. 
+
+
+Author -
+--------
+Group Name : Follow The Code
+Email Id   : wefollowthecode@gmail.com
+

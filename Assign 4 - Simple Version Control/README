@@ -1,0 +1,60 @@
+		   SIMPLE VERSION CONTROL 
+		-----------------------------
+
+What is it ?
+------------
+
+Simple Version control is an easy to use version control program which keeps track of all the previous versions (consecutive duplicate versions are not added) of a text file and allows the user to revert back to any version. 
+
+NOTE - 
+------
+
+EVERY VERSION IN THE VERSION FILE DOES NOT CONTAIN THE ENTIRE TEXT, INSTEAD IT ONLY CONTAINS THE INFORMATION ABOUT HOW IT IS DIFFERRENT FROM THE PREVIOUS VERSION.
+
+1)  Index of the first line is 0
+
+2) "- <index>" : If a line at index '5' is deleted, the new version will only have "- 5"                  
+
+3)  "<string>"  : If a string "hello" is appended, the new version will only have "hello"
+
+4) If multiple lines are added/deleted, an error message is displayed.
+
+5) For the first 'commit', multiple lines are permitted.
+
+
+Usage -
+-------
+
+Input to the program include the command and file name, passed via command line arguments.
+
+1) 'commit' -  Adds the changes in the current file to the version file. In other words, creates a new version.
+	
+	Usage - ./svc commit <filename>
+	Eg    - ./svc commit one.txt
+
+2) 'version' - Fetches the Nth version. An option to load this version in the current file is provided.
+
+	Usage - ./svc version <filename> <version-no>
+	Eg    - ./svc version one.txt 4
+
+3) 'help' or invalid command - Displays the list of valid commands with their usage.
+
+	Eg    - ./svc help		
+
+
+Implementation -
+----------------
+
+A hidden file is created for every text file, which keeps track of all the versions. The name of this file is unique to its respective text file.
+
+The format of the version filename is - '.version<filename>' Eg - '.versionOne.txt'
+(PLEASE PRESS 'CTRL+H' TO VIEW HIDDEN FILES)
+
+Every time a commit command is executed, the version file is opened in append mode. During the first execution, a new file is created, which is used through out the process. A new version starts with '#Version <Version No.>'. The string containing information about how the file is different from the previous version is written under the this statement.
+
+To fetch an existing version, the 'version' command is used, with additional data as version number. The program scans the version file to reach the Nth version while updating the buffer at every version. The buffer contents are displayed when the execution reaches the nth version. If users wants the load this version, the buffer contents are written in the current file.
+
+Author -
+--------
+Group Name : Follow The Code
+Email Id   : wefollowthecode@gmail.com

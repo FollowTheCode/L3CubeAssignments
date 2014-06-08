@@ -1,0 +1,16 @@
+Enter the name of the Drive: E:\
+Directory/Drive: E:\
+---------------------------------------------------------
+Duplicates Files: 
+--------------------------------------------------------------------------------------------------------------------------
+0:  E:\Aman1\Aman1\Aman.txt 	Size (bytes)= 0          	Readable	Writable	Last Modified: 2014-06-03
+1:  E:\Aman1\Aman.txt    	Size (bytes)= 0          	Readable	Writable	Last Modified: 2014-06-03
+2:  E:\Aman3\MCode.txt   	Size (bytes)= 137        	Readable	Writable	Last Modified: 2014-06-05
+3:  E:\Aman3\Aman1\MCode.txt 	Size (bytes)= 137        	Readable	Writable	Last Modified: 2014-06-05
+4:  E:\MCode.txt         	Size (bytes)= 137        	Readable	Writable	Last Modified: 2014-06-05
+5:  E:\weblog.txt        	Size (bytes)= 645596     	Readable	Writable	Last Modified: 2014-06-05
+6:  E:\Aman3\weblog.txt  	Size (bytes)= 645596     	Readable	Writable	Last Modified: 2014-06-05
+--------------------------------------------------------------------------------------------------------------------------
+Do you want to delete any file from the above list(y/n): y
+Select the index number of the file to be deleted: 3
+Deleted

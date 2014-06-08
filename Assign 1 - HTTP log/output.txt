@@ -1,0 +1,133 @@
+hrishi@hrishi-Lenovo-Z580:~/l3cube/HTTPlog$ gcc HTTPlog.c
+hrishi@hrishi-Lenovo-Z580:~/l3cube/HTTPlog$ ./a.out
+
+
+LOG FILE AND SUMMARY FILE SAVED IN THE CURRENT FOLDER.
+
+	-------------------MENU----------------------
+	1. URL STATS
+	2. RESULT STATS
+	3. BROWSER STATS
+	4. OS STATS
+	5. BOT STATS
+	6. EXIT
+
+	Select an Option - 1
+
+
+-------------------------------------------------------------------------------------------------------------------
+URL STATISTICS -
+
+www.twibuzz.com : 1779
+www.kinneryandrajan.com : 843
+twibuzz.com : 133
+www.recipewithme.com : 16
+kinneryandrajan.com : 6
+recipewithme.com : 1
+
+-------------------------------------------------------------------------------------------------------------------
+
+	-------------------MENU----------------------
+	1. URL STATS
+	2. RESULT STATS
+	3. BROWSER STATS
+	4. OS STATS
+	5. BOT STATS
+	6. EXIT
+
+	Select an Option - 2
+
+
+-------------------------------------------------------------------------------------------------------------------
+RESULT STATISTICS - 
+
+SUCCESS - 2197
+REDIRECTION - 354
+ERROR (CLIENT) - 226
+ERROR (SERVER) - 1
+
+-------------------------------------------------------------------------------------------------------------------
+
+	-------------------MENU----------------------
+	1. URL STATS
+	2. RESULT STATS
+	3. BROWSER STATS
+	4. OS STATS
+	5. BOT STATS
+	6. EXIT
+
+	Select an Option - 3
+
+
+-------------------------------------------------------------------------------------------------------------------
+BROWSER STATISTICS -
+
+MSIE : 633
+Firefox : 516
+Chrome : 200
+Safari : 104
+Opera : 38
+
+Other : 1287
+Note - 'Other' may include bots, called spiders. EG - googlebot, Yahoo ! slurp, etc 
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+	-------------------MENU----------------------
+	1. URL STATS
+	2. RESULT STATS
+	3. BROWSER STATS
+	4. OS STATS
+	5. BOT STATS
+	6. EXIT
+
+	Select an Option - 4
+
+
+-------------------------------------------------------------------------------------------------------------------
+OS YO STATISTICS -
+
+Windows : 1158
+Mac OS : 192
+Linux : 136
+
+Other : 1292
+Note - 'Other' may include bots, called spiders. EG - googlebot, Yahoo ! slurp, etc 
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+	-------------------MENU----------------------
+	1. URL STATS
+	2. RESULT STATS
+	3. BROWSER STATS
+	4. OS STATS
+	5. BOT STATS
+	6. EXIT
+
+	Select an Option - 5
+
+
+-------------------------------------------------------------------------------------------------------------------
+BOT STATISTICS -
+
+Googlebot : 726
+Yahoo! Slurp : 416
+Twiceler : 32
+Exabot : 8
+msnbot : 2
+
+-------------------------------------------------------------------------------------------------------------------
+
+	-------------------MENU----------------------
+	1. URL STATS
+	2. RESULT STATS
+	3. BROWSER STATS
+	4. OS STATS
+	5. BOT STATS
+	6. EXIT
+
+	Select an Option - 6
+hrishi@hrishi-Lenovo-Z580:~/l3cube/HTTPlog$ 
+

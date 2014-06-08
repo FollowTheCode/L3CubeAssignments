@@ -1,0 +1,52 @@
+Enter number of people:5
+
+....After 33 trials....
+
+
+***************************
+--Trial 34--
+
+Randomly assigned birthdays
+
+--16 May
+--29 March
+--6 May
+--1 June
+--4 September
+
+Duplicate birth dates:
+Nil
+
+Number of repeated values in this trial:0
+
+Number of repeated values through all the trials:1
+
+Probability = (1/34)= 0.029412
+
+
+***************************
+--Trial 35--
+
+Randomly assigned birthdays
+
+--27 January
+--20 August
+--10 August
+--9 May
+--4 May
+
+Duplicate birth dates:
+Nil
+
+Number of repeated values in this trial:0
+
+Number of repeated values through all the trials:1
+
+Probability = (1/35)= 0.028571
+
+
+Mathematical probability for 5 people : 0.027136
+
+Both probabilities are approximately equal.
+Hence, the birthday paradox has been proved valid.
+***************************
