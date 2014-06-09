@@ -170,6 +170,12 @@ int addToVersionFile()
 		printf("\nYOU CAN ONLY APPEND ONE LINE OR DELETE ANY ONE LINE AT GIVEN TIME.\nPLEASE UNDO THE CHANGES AND COMMIT.\n");
 		return -1;
 	}
+	if(issues == -2)
+	{
+		/* Either str length > 10 or no. of lines > 20 */
+		/* Message displayed in check() */
+		return -1;
+	}
 	versions++;
 	/* WRITE THE CONTENTS OF THE CURRENT FILE */
 	fprintf(version, "%s %d\n", "#Version", versions);
@@ -189,24 +195,34 @@ int check(char append[], char buffer[][LINE_SIZE], int n)
 	*/
 
 	int i = 0, count=0, d;
-	char str[LINE_SIZE];
+	char str[LINE_SIZE+20]; //show error for length(str) > 10
 	rewind(current);
 	strcpy(append,"");
 
 	/* COUNT THE NUMBER OF LINES AND INITIALIZE STR WITH THE LAST LINE 
 		OF THE CURRENT FILE */
-	while(fgets(str, LINE_SIZE, current))
+	while(fgets(str, LINE_SIZE+20, current))
 	{
 		if(!strcmp(str, "\n"))
 		{
-			printf("\nBlank line ignored");
 			continue;
+		}
+		if(strlen(str) > 10)
+		{
+			printf("\nEvery line must have atmost 10 characters. Please update the text file.\n");
+			return -2;
 		}
 		count++;
 	}
 	if(str[(strlen(str)-1)] == '\n')
 			str[(strlen(str)-1)] = '\0';
 
+	/* MORE THAN 20 LINES */
+	if(count > 20)
+	{
+		printf("\nText file cannot have more than 20 lines, Please update.\n");
+		return -2;	
+	}
 	/* MULTIPLE LINES ADDED/DELETED */
 	if(count < (n-1) || count > (n+1))
 		return -1;
@@ -248,7 +264,6 @@ int getDeletedIndex(char buffer[][LINE_SIZE], int n)
 			str[(strlen(str)-1)] = '\0';
 		if(!strcmp(str, ""))
 		{
-			printf("\nBlank line ignored");
 			continue;
 		}
 		/* DELETED LINE INDEX FOUND */
@@ -263,14 +278,26 @@ int getDeletedIndex(char buffer[][LINE_SIZE], int n)
 /* FUNCTION TO CREATE THE FIRST VERSION. MULTI-LINE TEXT FILE CAN BE COMMITED IN THE FIRST VERSION */
 int addContents()
 {
-	char str[LINE_SIZE];
+	char str[LINE_SIZE+20]; //show error for length(str) > 10
 	int line_count=0;
-	while(fgets(str, LINE_SIZE, current))
+	while(fgets(str, LINE_SIZE + 20, current))
+	{
+		if(strlen(str) > 10)
+		{
+			printf("\nEvery line must have atmost 10 characters. Please update the text file.\n");
+			return -1;
+		}
 		line_count++;
+	}
 	if(line_count == 0)
 	{
 		printf("\nEmpty File. Please add some content.\n");
 		return -1;
+	}
+	if(line_count > 20)
+	{
+		printf("\nText file cannot have more than 20 lines, Please update.\n");
+		return -1;	
 	}
 	rewind(current);
 	fprintf(version, "%s\n", "#Version 0");
