@@ -4,11 +4,11 @@
 What is it ?
 ------------
 
-This is a parser which parses a pcap file(tcp or arp ONLY) and displays the content
+This is a parser which parses a pcap file(tcp/arp/http ) and displays the content
 in a proper readable format.
 
 Usage(On Linux) -
--------
+----------------
 
 Compile the code using lpcap.
 
